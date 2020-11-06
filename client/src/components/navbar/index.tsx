@@ -1,24 +1,58 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { FaBars } from 'react-icons/fa'
 
-import image from '../../assets/logo.png'
+import {
+  Wrapper,
+  Container,
+  Logo,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLink,
+  NavBtn,
+  NavBtnLink
+} from './styles'
 
-import { Container } from './styles'
-
-export interface Props {
-  toggle: boolean
+interface Props {
+  toggle?: any
 }
 
-const NavBar: React.FC = () => {
-  const [toggle, setToggle] = useState<boolean>(true)
-  const handleChange = async () => {
-    console.log('antes: ' + toggle)
-    setToggle(!toggle)
-    console.log('depois: ' + toggle)
-  }
-
+const NavBar: React.FC<Props> = ({ toggle }) => {
   return (
     <>
-      <Container toggle={toggle}>
+      <Wrapper>
+        <Container>
+          <Logo>dolla</Logo>
+
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+
+          <NavMenu>
+            <NavItem>
+              <NavLink>Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Serviços</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Contato</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Sign Up</NavLink>
+            </NavItem>
+          </NavMenu>
+
+          <NavBtn>
+            <NavBtnLink> Sign In </NavBtnLink>
+          </NavBtn>
+        </Container>
+      </Wrapper>
+
+      {/* <Container>
         <img src={image} alt="logo do site" />
 
         <label className="switch">
@@ -57,7 +91,7 @@ const NavBar: React.FC = () => {
             </li>
           </ul>
         </nav>
-      </Container>
+      </Container> */}
     </>
   )
 }

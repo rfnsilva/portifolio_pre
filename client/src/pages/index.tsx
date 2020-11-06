@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import NavBar from '../components/navbar'
+import MenuToggle from '../components/MenuToggle'
 
 import { Container } from '../styles/pages/index'
 
@@ -22,13 +23,20 @@ export async function getServerSideProps(ctx) {
 */
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <Container>
       <Head>
         <title>Home</title>
       </Head>
 
-      <NavBar />
+      <MenuToggle isOpen={isOpen} toggle={toggle} />
+      <NavBar toggle={toggle} />
     </Container>
   )
 }
