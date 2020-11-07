@@ -32,7 +32,14 @@ const servicesSection: React.FC = () => {
         </Card>
 
         <Card>
-          <Icon></Icon>
+          <Icon>
+            <Image
+              src="/car.svg"
+              width="400"
+              height="400"
+              alt="Profile Picture"
+            />
+          </Icon>
           <ServicesH2>reduce expenses</ServicesH2>
           <ServicesP>
             We help reduce your fess and increase your overall revenue.
@@ -40,7 +47,14 @@ const servicesSection: React.FC = () => {
         </Card>
 
         <Card>
-          <Icon></Icon>
+          <Icon>
+            <Image
+              src="/car.svg"
+              width="400"
+              height="400"
+              alt="Profile Picture"
+            />
+          </Icon>
           <ServicesH2>reduce expenses</ServicesH2>
           <ServicesP>
             We help reduce your fess and increase your overall revenue.
