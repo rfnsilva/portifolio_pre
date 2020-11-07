@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 
 import NavBar from '../components/navbar'
-import MenuToggle from '../components/MenuToggle'
+import MenuToggle from '../components/menuToggle'
+import HeroSection from '../components/heroSection'
 
 import { Container } from '../styles/pages/index'
 
@@ -37,6 +38,7 @@ export default function Home() {
 
       <MenuToggle isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
+      <HeroSection />
     </Container>
   )
 }
