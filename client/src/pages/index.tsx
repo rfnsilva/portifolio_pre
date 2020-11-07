@@ -4,6 +4,7 @@ import Head from 'next/head'
 import NavBar from '../components/navbar'
 import MenuToggle from '../components/menuToggle'
 import HeroSection from '../components/heroSection'
+import InfoSection from '../components/infoSection'
 
 import { Container } from '../styles/pages/index'
 
@@ -39,6 +40,7 @@ export default function Home() {
       <MenuToggle isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <HeroSection />
+      <InfoSection />
     </Container>
   )
 }
