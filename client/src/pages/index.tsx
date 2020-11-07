@@ -5,6 +5,7 @@ import NavBar from '../components/navbar'
 import MenuToggle from '../components/menuToggle'
 import HeroSection from '../components/heroSection'
 import InfoSection from '../components/infoSection'
+import ServicesSection from '../components/servicesSection'
 
 import { Container } from '../styles/pages/index'
 
@@ -41,6 +42,7 @@ export default function Home() {
       <NavBar toggle={toggle} />
       <HeroSection />
       <InfoSection />
+      <ServicesSection />
     </Container>
   )
 }
