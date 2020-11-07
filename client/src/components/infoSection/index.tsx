@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-scroll'
+import Image from 'next/image'
 
 import {
   Container,
@@ -13,7 +13,7 @@ import {
   Col1,
   Col2,
   ImgWrapper,
-  Img
+  Button
 } from './styles'
 
 const infoSection: React.FC = () => {
@@ -23,16 +23,27 @@ const infoSection: React.FC = () => {
         <InfoRow>
           <Col1>
             <Text>
-              <TopLine>TopLine</TopLine>
-              <Heading>Heading</Heading>
-              <Subtitle>Subtitle</Subtitle>
-              <BtnWrapper></BtnWrapper>
+              <TopLine>Premium Bank</TopLine>
+              <Heading>Unlimeted transactions with zero fees</Heading>
+              <Subtitle>
+                Get acess to our exclusive app that allows you to send unlimited
+                transactions without getting charged any fees.
+              </Subtitle>
+              <BtnWrapper>
+                <Button>Get started</Button>
+              </BtnWrapper>
             </Text>
           </Col1>
 
           <Col2>
             <ImgWrapper>
-              <Img />
+              <Image
+                src="/car.svg"
+                width="400"
+                height="400"
+                alt="Profile Picture"
+              />
+              {/* <img src={imageCar} alt="imagem de um carro" /> */}
             </ImgWrapper>
           </Col2>
         </InfoRow>

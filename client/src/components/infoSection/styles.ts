@@ -73,7 +73,25 @@ export const BtnWrapper = styled.div`
   justify-content: flex-start;
 `
 
-// export const Button = styled.div``
+export const Button = styled.button`
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 14px 48px;
+  color: #010606;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #01bf71;
+  }
+`
 
 export const Col1 = styled.div`
   margin-bottom: 15px;
@@ -91,7 +109,7 @@ export const ImgWrapper = styled.div`
   max-width: 555px;
   height: 100%;
 `
-export const Img = styled.div`
+export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;

@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-// import { ArrowForward, ArrowRight } from 'react-icons/fa'
-
-// import VideoFundo from '../../assets/videos/video.mp4'
 
 import {
   Container,
